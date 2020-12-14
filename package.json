@@ -1,6 +1,6 @@
 {
   "name": "debugger-obj-yc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "H5调试网站工具",
   "main": "./dist/debuggerObj.min.js",
   "scripts": {
