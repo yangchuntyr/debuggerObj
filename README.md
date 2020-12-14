@@ -7,5 +7,7 @@ DebuggerObj 简单的实现了一个 H5 的调试功能，核心使用的是腾�
 
 ## 使用办法
 
-- 1. 引入 npm i debugger-obj-yc 或 script 标签引入
-- 2. DebuggerObj.checkDebugger();
+- 1. 引入 npm i debugger-obj-yc
+- 2. import DbuggerObj from 'debugger-obj-yc'
+- 3. DebuggerObj.checkDebugger();
+- 4. 最后支持 <script src="https://github.com/yangchuntyr/debuggerObj/blob/master/dist/debuggerObj.min.js"></script> 引入
