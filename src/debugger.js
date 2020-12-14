@@ -4,11 +4,16 @@
 class DebuggerObj {
   /**
    * second 秒内点击 clickCount次数开启调试模式
+   * @param {Number} mode 开发模式
    * @param {Number} clickCount 点击次数
    * @param {Number} second 秒数
    */
-  constructor(clickCount = 7, second = 15) {
+  constructor(mode = "development", clickCount = 7, second = 15) {
     this.gClickCount = 0;
+    /**
+     * 开发模式
+     */
+    this.mode = mode;
     /**
      * 已开启调试模式的缓存标志
      */
@@ -48,7 +53,7 @@ class DebuggerObj {
      * 1.是非正式环境都打开调试模式
      * 2.如果是正式环境就多少秒内点击多少下下就开启调试模式
      */
-    if (process.env.NODE_ENV != "production") {
+    if (this.mode != "production") {
       this.startDebugger();
       return;
     }
