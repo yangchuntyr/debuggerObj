@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DebuggerObj demo</title>
+  </head>
+  <script src="../dist/debuggerObj.min.js"></script>
+
+  <body>
+    <div ttt>DebuggerObj 测试页面</div>
+    <div>点击屏幕7下 显示vconsole</div>
+    <script>
+      window.onload = function () {
+        const res = DebuggerObj.checkDebugger();
+        console.log(res);
+      };
+    </script>
+    <style>
+      html {
+        height: 100%;
+      }
+      div[ttt] {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </body>
+</html>
