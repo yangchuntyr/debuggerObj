@@ -1,8 +1,11 @@
 const pkg = require("./package.json");
 const Webpack = require("webpack");
 const Path = require("path");
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
-
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+console.log(
+  Path.resolve(__dirname, "./src/debuggerObj.min.d.ts"),
+  Path.resolve(__dirname, "./dist/debuggerObj.min.d.ts")
+);
 module.exports = {
   mode: "production",
   devtool: false,
@@ -32,5 +35,11 @@ module.exports = {
     new Webpack.BannerPlugin(
       ["debuggerObj v" + pkg.version + " (" + ")", "谢谢大家使用"].join("\n")
     ),
+    new CopyWebpackPlugin([
+      {
+        from: "@/src/debuggerObj.min.d.ts",
+        to: "",
+      },
+    ]),
   ],
 };

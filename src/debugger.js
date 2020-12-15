@@ -71,7 +71,7 @@ class DebuggerObj {
     }
   }
 
-  static checkDebugger() {
+  static checkDebugger(mode = "development") {
     const temp = new DebuggerObj();
     temp.innerCheckDebugger();
     return temp;
