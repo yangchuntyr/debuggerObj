@@ -35,11 +35,13 @@ module.exports = {
     new Webpack.BannerPlugin(
       ["debuggerObj v" + pkg.version + " (" + ")", "谢谢大家使用"].join("\n")
     ),
-    new CopyWebpackPlugin([
-      {
-        from: "@/src/debuggerObj.min.d.ts",
-        to: "",
-      },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: Path.resolve(__dirname, "./src/debuggerObj.min.d.ts"),
+          to: "",
+        },
+      ],
+    }),
   ],
 };
