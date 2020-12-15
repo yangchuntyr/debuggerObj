@@ -3,11 +3,17 @@
   "version": "1.0.5",
   "description": "H5调试网站工具",
   "main": "./dist/debuggerObj.min.js",
+  "typings": "./dist/debuggerObj.min.d.ts",
   "scripts": {
     "build": "webpack"
   },
   "author": "yc",
   "license": "ISC",
+  "keywords": [
+    "console",
+    "debug",
+    "mobile"
+  ],
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
